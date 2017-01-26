@@ -2,7 +2,7 @@ _**Github Slack Notifier —** stay up to date with github notifications in slac
 
 ## Usage
 
-* Create a slack bot [here](https://autcoding.slack.com/apps/manage/custom-integrations) and get the **API Token**
+* Create a slack bot [here](https://slack.com/apps/manage/custom-integrations) and get the **API Token**
 * Create a whitelist like this: `"githubUsername1:slackUsername1;githubUsername2:slackUsername2"`
 * deploy the bot
 ```
