@@ -37,7 +37,7 @@ function createdComment(body) {
   return {
     attachments: [
       {
-        fields: [ { value: body.comment.body.substring(0, 200) + '...' } ],
+        fields: [ { value: body.comment.body.substring(0, 100) + '...' } ],
         title: body.repository.name,
         title_link: body.comment.html_url,
         fallback: `New comment in ${body.repository.name} by ${body.comment.user.login}`,
@@ -53,7 +53,7 @@ function createdPullrequest(body) {
   return {
     attachments: [
       {
-        fields: [ { value: body.pull_request.body.substring(0, 200) + '...' } ],
+        fields: [ { value: body.pull_request.body.substring(0, 100) + '...' } ],
         title: `${body.pull_request.number}: ${body.pull_request.title}`,
         title_link: body.pull_request.html_url,
         fallback: `New Pullrequest in ${body.repository.name} by ${body.pull_request.user.login}`,
@@ -69,7 +69,7 @@ function createdPullrequestReview(body) {
   return {
     attachments: [
       {
-        fields: [ { value: body.review.body.substring(0, 200) + '...' } ],
+        fields: [ { value: body.review.body.substring(0, 100) + '...' } ],
         title: `${body.pull_request.number}: ${body.pull_request.title}`,
         title_link: body.review.html_url,
         fallback: `New Review in ${body.repository.name} by ${body.review.user.login}`,
@@ -85,7 +85,7 @@ function createdPullrequestReviewComment(body) {
   return {
     attachments: [
       {
-        fields: [ { value: body.comment.body.substring(0, 200) + '...' } ],
+        fields: [ { value: body.comment.body.substring(0, 100) + '...' } ],
         title: `${body.pull_request.number}: ${body.pull_request.title}`,
         title_link: body.comment.html_url,
         fallback: `New comment in ${body.pull_request.title} by ${body.comment.user.login}`,
@@ -101,7 +101,7 @@ function issue(body) {
   return {
     attachments: [
       {
-        fields: [ { value: body.issue.body.substring(0, 200) + '...' } ],
+        fields: [ { value: body.issue.body.substring(0, 100) + '...' } ],
         title: `${body.issue.number}: ${body.issue.title}`,
         title_link: body.issue.html_url,
         fallback: `${body.issue.user.login} ${body.action} issue ${body.issue.title}`,
@@ -117,7 +117,7 @@ function issueComment(body) {
   return {
     attachments: [
       {
-        fields: [ { value: body.issue.body.substring(0, 200) + '...' } ],
+        fields: [ { value: body.issue.body.substring(0, 100) + '...' } ],
         title: `${body.issue.number}: ${body.issue.title}`,
         title_link: body.comment.html_url,
         fallback: `New comment in ${body.issue.title} by ${body.comment.user.login}`,
