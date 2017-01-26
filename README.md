@@ -12,3 +12,8 @@ now -e slacktoken=<slack-token> -e whitelist=<githubUsername:slackUsername> litt
 * Set the payload URL to your **now deployment url**
 * Select content type **application/json**
 * Select **send me everything**
+
+---
+
+![](screenshots/now-slacke-bot.messagepreview.1.png)
+![](screenshots/now-slacke-bot.messagepreview.2.png)
