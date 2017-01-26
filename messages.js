@@ -75,7 +75,7 @@ function createdPullrequestReview(body) {
         fallback: `New Review in ${body.repository.name} by ${body.review.user.login}`,
         mrkdwn_in: [ 'text', 'pretext' ],
         color: '#0A4CA1',
-        text: `Pullrequest *${body.review.state}* in <${body.repository.html_url}|${body.repository.title}> by <${body.review.user.html_url}|${body.review.user.login}>`
+        text: `Pullrequest *${body.review.state}* in <${body.repository.html_url}|${body.repository.name}> by <${body.review.user.html_url}|${body.review.user.login}>`
       }
     ]
   };
@@ -107,7 +107,7 @@ function issue(body) {
         fallback: `${body.issue.user.login} ${body.action} issue ${body.issue.title}`,
         mrkdwn_in: [ 'text', 'pretext' ],
         color: '#0AA10C',
-        text: `Issue *${body.action}* in <${body.repository.html_url}|${body.repository.title}> by <${body.issue.user.html_url}|${body.issue.user.login}>`
+        text: `Issue *${body.action}* in <${body.repository.html_url}|${body.repository.name}> by <${body.issue.user.html_url}|${body.issue.user.login}>`
       }
     ]
   };
@@ -123,7 +123,7 @@ function issueComment(body) {
         fallback: `New comment in ${body.issue.title} by ${body.comment.user.login}`,
         mrkdwn_in: [ 'text', 'pretext' ],
         color: '#0AA10C',
-        text: `Issue Comment *${body.action}* in <${body.repository.html_url}|${body.repository.title}> by <${body.issue.user.html_url}|${body.issue.user.login}>`
+        text: `Issue Comment *${body.action}* in <${body.repository.html_url}|${body.repository.name}> by <${body.issue.user.html_url}|${body.issue.user.login}>`
       }
     ]
   };
