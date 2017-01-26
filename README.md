@@ -8,7 +8,7 @@ _**Github Slack Notifier —** stay up to date with github notifications in slac
 ```
 now -e slacktoken=<slack-token> -e whitelist=<githubUsername:slackUsername> littleStudent/github-slack-notifier
 ```
-* Open the settings page of a repository or organisation settings and add a new webhook
+* Open the settings page of a repository or organisation and add a new **webhook**
 * Set the payload URL to your **now deployment url**
-* Selection content type **application/json**
-* Selection **send me everything**
+* Select content type **application/json**
+* Select **send me everything**
