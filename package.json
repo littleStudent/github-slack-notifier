@@ -1,0 +1,18 @@
+{
+	"name": "now_slack",
+	"version": "0.0.1",
+	"description": "Slack integration for now.sh",
+	"main": "index.js",
+	"scripts": {
+		"test": "xo && ava",
+		"start": "micro --harmony-async-await index.js"
+	},
+	"author": "Thomas Sattlecker",
+	"license": "ISC",
+	"dependencies": {
+		"botkit": "^0.4.9",
+		"micro": "^6.2.0",
+		"now-logs": "0.0.7",
+		"slackbots": "^1.0.2"
+	}
+}
