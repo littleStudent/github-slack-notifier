@@ -1,10 +1,9 @@
 {
-	"name": "now_slack",
+	"name": "github-slack-notifier",
 	"version": "0.0.1",
-	"description": "Slack integration for now.sh",
+	"description": "Github notifications delivered in Slack",
 	"main": "index.js",
 	"scripts": {
-		"test": "xo && ava",
 		"start": "micro --harmony-async-await index.js"
 	},
 	"author": "Thomas Sattlecker",
@@ -12,7 +11,6 @@
 	"dependencies": {
 		"botkit": "^0.4.9",
 		"micro": "^6.2.0",
-		"now-logs": "0.0.7",
 		"slackbots": "^1.0.2"
 	}
 }

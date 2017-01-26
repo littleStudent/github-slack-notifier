@@ -2,14 +2,9 @@ const { send, json } = require('micro');
 const botkit = require('botkit');
 const SlackBot = require('slackbots');
 const createMessage = require('./messages');
-require('now-logs')('github-slack-bot-secret-1');
 
 let whitelist = [];
 if (!process.env.slacktoken) {
-  console.log('Error: Specify token in environment');
-  throw new Error('Error: Specify token in environment');
-}
-if (!process.env.nowtoken) {
   console.log('Error: Specify token in environment');
   throw new Error('Error: Specify token in environment');
 }
