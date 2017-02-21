@@ -6,7 +6,6 @@ module.exports = function createMessage(body, event) {
       switch (body.action) {
         case 'opened':
         case 'edited':
-        case 'closed':
         case 'reopened':
           return createdPullrequest(body);
         default:
