@@ -57,7 +57,7 @@ function createdPullrequest(body) {
         title_link: body.pull_request.html_url,
         fallback: `Pullrequest ${body.action} in ${body.repository.full_name} by ${body.pull_request.user.login}`,
         mrkdwn_in: [ 'text', 'pretext' ],
-        color: '#0A4CA1',
+        color: '#f4ee42',
         text: `Pullrequest *${body.action}* in <${body.repository.html_url}|${body.repository.full_name}> by <${body.pull_request.user.html_url}|${body.pull_request.user.login}>`
       }
     ]
@@ -73,7 +73,7 @@ function createdPullrequestReview(body) {
         title_link: body.review.html_url,
         fallback: `Pullrequest ${body.review.state} in ${body.repository.name} by ${body.review.user.login}`,
         mrkdwn_in: [ 'text', 'pretext' ],
-        color: '#0A4CA1',
+        color: '#f4ee42',
         text: `Pullrequest *${body.review.state}* in <${body.repository.html_url}|${body.repository.name}> by <${body.review.user.html_url}|${body.review.user.login}>`
       }
     ]
@@ -89,7 +89,7 @@ function createdPullrequestReviewComment(body) {
         title_link: body.comment.html_url,
         fallback: `Pullrequest commented in ${body.repository.full_name} by ${body.comment.user.login}`,
         mrkdwn_in: [ 'text', 'pretext' ],
-        color: '#0A4CA1',
+        color: '#f4ee42',
         text: `Pullrequest *<${body.comment.html_url}|commented>* in <${body.repository.html_url}|${body.repository.full_name}> by <${body.comment.user.html_url}|${body.comment.user.login}>`
       }
     ]
