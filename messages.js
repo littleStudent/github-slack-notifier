@@ -116,13 +116,13 @@ function issueComment(body) {
   return {
     attachments: [
       {
-        fields: [ { value: body.issue.body.substring(0, 100) + '...' } ],
+        fields: [ { value: body.comment.body.substring(0, 100) + '...' } ],
         title: `${body.issue.number}: ${body.issue.title}`,
         title_link: body.comment.html_url,
-        fallback: `Issue Comment ${body.action} in ${body.repository.name} by ${body.issue.user.login}`,
+        fallback: `Issue Comment ${body.action} in ${body.repository.name} by ${body.comment.user.login}`,
         mrkdwn_in: [ 'text', 'pretext' ],
         color: '#0AA10C',
-        text: `Issue Comment *${body.action}* in <${body.repository.html_url}|${body.repository.name}> by <${body.issue.user.html_url}|${body.issue.user.login}>`
+        text: `Issue Comment *${body.action}* in <${body.repository.html_url}|${body.repository.name}> by <${body.comment.user.html_url}|${body.comment.user.login}>`
       }
     ]
   };
