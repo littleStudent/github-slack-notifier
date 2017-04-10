@@ -9,12 +9,6 @@
 	},
 	"author": "Thomas Sattlecker",
 	"license": "ISC",
-	"now": {
-		"name": "github-slack-notifier",
-		"aliases": [
-			"nowslack.now.sh"
-		]
-	},
 	"dependencies": {
 		"botkit": "^0.4.9",
 		"micro": "^6.2.0",
