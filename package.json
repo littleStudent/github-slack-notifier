@@ -1,16 +1,17 @@
 {
-	"name": "github-slack-notifier",
-	"version": "0.0.1",
-	"description": "Github notifications delivered in Slack",
-	"main": "index.js",
-	"scripts": {
-		"start": "micro --harmony-async-await index.js"
-	},
-	"author": "Thomas Sattlecker",
-	"license": "ISC",
-	"dependencies": {
-		"botkit": "^0.4.9",
-		"micro": "^6.2.0",
-		"slackbots": "^1.0.2"
-	}
+  "name": "github-slack-notifier",
+  "version": "0.0.1",
+  "description": "Github notifications delivered in Slack",
+  "main": "index.js",
+  "scripts": {
+    "start": "micro --harmony-async-await index.js"
+  },
+  "author": "Thomas Sattlecker",
+  "license": "ISC",
+  "dependencies": {
+    "botkit": "^0.4.9",
+    "micro": "^6.2.0",
+    "request": "^2.81.0",
+    "slackbots": "^1.0.2"
+  }
 }
