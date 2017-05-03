@@ -68,6 +68,12 @@ function createdPullrequestReview(body) {
   if (!body || !body.review) {
     return {};
   }
+  if (
+    body.review.state === 'changes_requested' ||
+    body.review.state === 'pending'
+  ) {
+    return {};
+  }
   return {
     attachments: [
       {
