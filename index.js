@@ -3,6 +3,7 @@ const botkit = require('botkit');
 const SlackBot = require('slackbots');
 const createMessage = require('./messages');
 const request = require('request');
+require('now-logs')('now-slack-bot')
 
 let whitelist = [];
 if (!process.env.slacktoken) {
@@ -52,7 +53,7 @@ const bot = controller
 
 
 module.exports = async (req, res) => {
-  request.put('https://simplecount.now.sh/api/56493916752419f1/increment');
+  request.put('https://simplecount.now.sh/api/lake/56493916752419f1/increment');
   const body = await json(req);
   let slackSenderId = whitelist[body.sender.login];
   this.users
