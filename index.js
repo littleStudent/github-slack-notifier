@@ -66,7 +66,10 @@ module.exports = async (req, res) => {
     })
     .forEach(user => {
       bot.startPrivateConversation({ user: user.id }, (err, convo) => {
-        convo.say(createMessage(body, req.headers['x-github-event']));
+				let message = createMessage(body, req.headers['x-github-event']);
+				if (message) {
+					convo.say(message);
+				}
       });
     });
   send(res, 200, body.action || 'something happened but i dont know what');
