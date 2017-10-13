@@ -5,18 +5,21 @@
   "main": "index.js",
   "scripts": {
     "start": "micro --harmony-async-await index.js",
+    "dev": "micro-dev",
     "deploy": "now && now alias"
   },
   "author": "Thomas Sattlecker",
   "license": "ISC",
   "dependencies": {
-    "botkit": "^0.4.9",
-    "micro": "^6.2.0",
+    "botkit": "0.6.2",
+    "micro": "^6.2.1",
+    "moment": "^2.18.1",
     "now-logs": "0.0.7",
     "request": "^2.81.0",
     "slackbots": "^1.0.2"
   },
   "devDependencies": {
+    "micro-dev": "^1.2.3",
     "now": "^4.11.0"
   }
 }
